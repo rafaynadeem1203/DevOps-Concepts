@@ -51,7 +51,7 @@ docker run --name database \
 
 2. Build the Docker image for the backend:
    ```bash
-   docker build -t mern-app-backend .
+   docker build -t mern-app-backend:1.0 .
    ```
 
 3. Run the backend container:
@@ -61,7 +61,7 @@ docker run --name database \
      -e MONGODB_URI=mongodb://admin:verysecretpassword@database:27017/admin \
      -e JWT_SECRET=somethingsecret \
      -p 4000:4000 \
-     -d mern-app-backend
+     -d mern-app-backend:1.0
    ```
 
 4. Seed the database:
@@ -104,7 +104,7 @@ docker run --name database \
 
 2. Build the Docker image for the frontend:
    ```bash
-   docker build -t mern-app-frontend .
+   docker build -t mern-app-frontend:1.0 .
    ```
 
 3. Run the frontend container:
@@ -112,7 +112,7 @@ docker run --name database \
    docker run --name frontend \
      --network host \
      -p 3000:3000 \
-     -d mern-app-frontend
+     -d mern-app-frontend:1.0
    ```
 
 ---

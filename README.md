@@ -36,6 +36,7 @@ Run the MongoDB container with the specified username and password:
 docker run --name database \
   -e MONGO_INITDB_ROOT_USERNAME=admin \
   -e MONGO_INITDB_ROOT_PASSWORD=verysecretpassword \
+  -p 27017:27017
   -d mongo
 ```
 

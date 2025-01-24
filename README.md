@@ -57,7 +57,7 @@ docker run --name database \
    ```bash
    docker run --name backend \
      --network host \
-     -e MONGODB_URI=mongodb://admin:verysecretpassword@localhost:27017/admin \
+     -e MONGODB_URI=mongodb://admin:verysecretpassword@database:27017/admin \
      -e JWT_SECRET=somethingsecret \
      -p 4000:4000 \
      -d mern-app-backend

@@ -57,7 +57,7 @@ docker run --name database \
 3. Run the backend container:
    ```bash
    docker run --name backend \
-     --network host \
+     --network mern-app \
      -e MONGODB_URI=mongodb://admin:verysecretpassword@database:27017/admin \
      -e JWT_SECRET=somethingsecret \
      -p 4000:4000 \
@@ -110,7 +110,7 @@ docker run --name database \
 3. Run the frontend container:
    ```bash
    docker run --name frontend \
-     --network host \
+     --network mern-app \
      -p 3000:3000 \
      -d mern-app-frontend:1.0
    ```
